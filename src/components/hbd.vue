@@ -11,9 +11,6 @@ const playAction = () => {
 const canplaythrough = (e) => {
   canPlay.value = true;
 };
-const progress = (e) => {
-  console.log(e);
-};
 </script>
 
 <template>
@@ -36,7 +33,6 @@ const progress = (e) => {
         loop
         ref="videoRef"
         preload="auto"
-        @progress="progress"
         @canplaythrough="canplaythrough"
         :controls="false"
       />
