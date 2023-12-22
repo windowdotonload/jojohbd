@@ -4,7 +4,10 @@ const playVideo = ref(false);
 const videoRef = ref(null);
 const canPlay = ref(false);
 const imgIndex = ref(2);
-const urlPrev = import.meta.env.MODE == "development" ? "/src" : "";
+const urlPrev =
+  import.meta.env.MODE == "development"
+    ? "/src"
+    : "https://windowdotonload.github.io/jojohbd";
 const playAction = () => {
   if (!canPlay.value) return;
   playVideo.value = true;
