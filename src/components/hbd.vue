@@ -1,26 +1,20 @@
 <script setup>
 import { ref } from "vue";
-import { FFmpeg } from "@ffmpeg/ffmpeg";
-import { fetchFile, toBlobURL } from "@ffmpeg/util";
-alert('hello')
 const playVideo = ref(false);
 const videoRef = ref(null);
-const msg = ref("can not play video");
+const canPlay = ref(false);
 const playAction = () => {
+  if (!canPlay.value) return;
   playVideo.value = true;
   videoRef.value.play();
 };
 const canplaythrough = (e) => {
-  console.log(e);
-  alert("can play video")
-  msg.value = "can play video";
-  console.log("canplaythrough");
+  canPlay.value = true;
 };
 </script>
 
 <template>
   <div class="container">
-    {{ msg }}
     <div class="content__box">
       <div
         style="
