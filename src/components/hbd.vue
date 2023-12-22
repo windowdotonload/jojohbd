@@ -18,7 +18,7 @@ setInterval(() => {
 }, 2800);
 setTimeout(() => {
   canPlay.value = true;
-}, 1800);
+}, 8600);
 </script>
 
 <template>
