@@ -4,10 +4,6 @@ const playVideo = ref(false);
 const videoRef = ref(null);
 const canPlay = ref(false);
 const imgIndex = ref(2);
-const urlPrev =
-  import.meta.env.MODE == "development"
-    ? "/src"
-    : "https://windowdotonload.github.io/jojohbd";
 const playAction = () => {
   if (!canPlay.value) return;
   playVideo.value = true;
@@ -30,7 +26,7 @@ setTimeout(() => {
     <div class="content__box">
       <div class="hbd__pleaceholder" v-show="!playVideo" @click="playAction">
         <img
-          :src="`${urlPrev}/assets/hbd${imgIndex}.jpg`"
+          src="../assets/hbd1.jpg"
           alt="hbd"
           class="img_box"
           :style="{
@@ -38,7 +34,7 @@ setTimeout(() => {
           }"
         />
         <img
-          :src="`${urlPrev}/assets/hbd${imgIndex}.jpg`"
+          src="../assets/hbd2.jpg"
           alt="hbd"
           class="img_box"
           :style="{
@@ -46,7 +42,7 @@ setTimeout(() => {
           }"
         />
         <img
-          :src="`${urlPrev}/assets/hbd${imgIndex}.jpg`"
+          src="../assets/hbd3.jpg"
           alt="hbd"
           class="img_box"
           :style="{
