@@ -2,7 +2,7 @@
 
 <template>
   <div class="container">
-    <video src="https://raw.githubusercontent.com/ffmpegwasm/testdata/master/video-15s.avi" controls class="hbd-video" />
+    <video src="../assets/hbd.ogv" controls class="hbd-video" />
   </div>
 </template>
 
