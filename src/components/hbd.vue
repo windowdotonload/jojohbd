@@ -2,7 +2,7 @@
 
 <template>
   <div class="container">
-    <video src="../assets/video.mp4" controls class="hbd-video" />
+    <video src="../assets/hbd.mp4" controls class="hbd-video" />
   </div>
 </template>
 
