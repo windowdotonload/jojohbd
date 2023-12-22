@@ -1,13 +1,37 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const playVideo = ref(false);
+const videoRef = ref(null);
+const playAction = () => {
+  console.dir(videoRef.value);
+  playVideo.value = true;
+  videoRef.value.play();
+};
+</script>
 
 <template>
   <div class="container">
-    <video src="../assets/hbd.mp4" controls class="hbd-video" />
+    <div class="content__box">
+      <div
+        style="background: red; width: 100%; height: 100%"
+        v-show="!playVideo"
+        @click="playAction"
+      ></div>
+      <video
+        v-show="playVideo"
+        src="../assets/hbd.mp4"
+        class="hbd-video"
+        loop
+        ref="videoRef"
+        :controls="false"
+      />
+    </div>
   </div>
 </template>
 
 <style scoped>
 .container {
+  position: relative;
   background: #f1e5a8;
   width: 100vw;
   height: 100vh;
@@ -21,10 +45,22 @@
   padding-top: 0;
   backdrop-filter: blur(10px);
 }
-.hbd-video {
+.content__box {
+  box-sizing: border-box;
+  padding: 0;
   height: 60%;
+  width: 50%;
+  max-width: 50%;
+  position: relative;
+  display: flex;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hbd-video {
+  height: 100%;
   border-radius: 16px;
   box-shadow: 0 0 10px rgb(156, 156, 156, 0.8);
-  margin-top: -10%;
 }
 </style>
