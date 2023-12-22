@@ -4,6 +4,7 @@ const playVideo = ref(false);
 const videoRef = ref(null);
 const canPlay = ref(false);
 const imgIndex = ref(2);
+const urlPrev = import.meta.env.MODE == "development" ? "/src" : "";
 const playAction = () => {
   if (!canPlay.value) return;
   playVideo.value = true;
@@ -26,7 +27,7 @@ setTimeout(() => {
     <div class="content__box">
       <div class="hbd__pleaceholder" v-show="!playVideo" @click="playAction">
         <img
-          :src="`/src/assets/hbd${imgIndex}.jpg`"
+          :src="`${urlPrev}/assets/hbd${imgIndex}.jpg`"
           alt="hbd"
           class="img_box"
           :style="{
@@ -34,7 +35,7 @@ setTimeout(() => {
           }"
         />
         <img
-          :src="`/src/assets/hbd${imgIndex}.jpg`"
+          :src="`${urlPrev}/assets/hbd${imgIndex}.jpg`"
           alt="hbd"
           class="img_box"
           :style="{
@@ -42,7 +43,7 @@ setTimeout(() => {
           }"
         />
         <img
-          :src="`/src/assets/hbd${imgIndex}.jpg`"
+          :src="`${urlPrev}/assets/hbd${imgIndex}.jpg`"
           alt="hbd"
           class="img_box"
           :style="{
