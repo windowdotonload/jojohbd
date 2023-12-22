@@ -11,6 +11,9 @@ const playAction = () => {
 const canplaythrough = (e) => {
   canPlay.value = true;
 };
+const progress = (e) => {
+  console.log(e);
+};
 </script>
 
 <template>
@@ -33,6 +36,7 @@ const canplaythrough = (e) => {
         loop
         ref="videoRef"
         preload="auto"
+        @progress="progress"
         @canplaythrough="canplaythrough"
         :controls="false"
       />
@@ -60,8 +64,8 @@ const canplaythrough = (e) => {
   box-sizing: border-box;
   padding: 0;
   height: 60%;
-  width: 50%;
-  max-width: 50%;
+  min-width: 39%;
+  width: fit-content;
   position: relative;
   display: flex;
   border-radius: 16px;
