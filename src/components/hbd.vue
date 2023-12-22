@@ -2,15 +2,21 @@
 import { ref } from "vue";
 const playVideo = ref(false);
 const videoRef = ref(null);
+const msg = ref("can not play video");
 const playAction = () => {
-  console.dir(videoRef.value);
   playVideo.value = true;
   videoRef.value.play();
+};
+const canplaythrough = (e) => {
+  console.log(e);
+  msg.value = "can play video";
+  console.log("canplaythrough");
 };
 </script>
 
 <template>
   <div class="container">
+    {{ msg }}
     <div class="content__box">
       <div
         style="background: red; width: 100%; height: 100%"
@@ -23,6 +29,7 @@ const playAction = () => {
         class="hbd-video"
         loop
         ref="videoRef"
+        @canplaythrough="canplaythrough"
         :controls="false"
       />
     </div>
