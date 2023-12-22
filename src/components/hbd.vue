@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import { FFmpeg } from "@ffmpeg/ffmpeg";
+import { fetchFile, toBlobURL } from "@ffmpeg/util";
+alert('hello')
 const playVideo = ref(false);
 const videoRef = ref(null);
 const msg = ref("can not play video");
@@ -9,6 +12,7 @@ const playAction = () => {
 };
 const canplaythrough = (e) => {
   console.log(e);
+  alert("can play video")
   msg.value = "can play video";
   console.log("canplaythrough");
 };

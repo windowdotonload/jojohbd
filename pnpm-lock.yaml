@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@ffmpeg/ffmpeg':
+    specifier: ^0.12.9
+    version: 0.12.9
+  '@ffmpeg/util':
+    specifier: ^0.12.1
+    version: 0.12.1
   vue:
     specifier: ^3.3.11
     version: 3.3.13
@@ -248,6 +254,23 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@ffmpeg/ffmpeg@0.12.9:
+    resolution: {integrity: sha512-0UB7e8+nL9t8tBjQzSgh2dbA5XycLfL2nkR+4dP3HB4Dmog8fKeSRZpAVX9dT8Q9EJcBwJDR2dRL/0bt5UCiuQ==, tarball: https://registry.npmmirror.com/@ffmpeg/ffmpeg/-/ffmpeg-0.12.9.tgz}
+    engines: {node: '>=18.x'}
+    dependencies:
+      '@ffmpeg/types': 0.12.2
+    dev: false
+
+  /@ffmpeg/types@0.12.2:
+    resolution: {integrity: sha512-NJtxwPoLb60/z1Klv0ueshguWQ/7mNm106qdHkB4HL49LXszjhjCCiL+ldHJGQ9ai2Igx0s4F24ghigy//ERdA==, tarball: https://registry.npmmirror.com/@ffmpeg/types/-/types-0.12.2.tgz}
+    engines: {node: '>=16.x'}
+    dev: false
+
+  /@ffmpeg/util@0.12.1:
+    resolution: {integrity: sha512-10jjfAKWaDyb8+nAkijcsi9wgz/y26LOc1NKJradNMyCIl6usQcBbhkjX5qhALrSBcOy6TOeksunTYa+a03qNQ==, tarball: https://registry.npmmirror.com/@ffmpeg/util/-/util-0.12.1.tgz}
+    engines: {node: '>=18.x'}
+    dev: false
 
   /@jridgewell/sourcemap-codec@1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==, tarball: https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz}
