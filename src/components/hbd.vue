@@ -11,6 +11,10 @@ const playAction = () => {
 const canplaythrough = (e) => {
   canPlay.value = true;
 };
+setTimeout(() => {
+  canPlay.value = true;
+  alert("alert");
+}, 1000);
 </script>
 
 <template>
