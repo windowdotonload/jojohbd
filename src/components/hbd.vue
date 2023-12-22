@@ -19,7 +19,13 @@ const canplaythrough = (e) => {
     {{ msg }}
     <div class="content__box">
       <div
-        style="background: red; width: 100%; height: 100%;z-index: 99;position: absolute;"
+        style="
+          background: red;
+          width: 100%;
+          height: 100%;
+          z-index: 99;
+          position: absolute;
+        "
         v-show="!playVideo"
         @click="playAction"
       ></div>
@@ -28,6 +34,7 @@ const canplaythrough = (e) => {
         class="hbd-video"
         loop
         ref="videoRef"
+        preload="auto"
         @canplaythrough="canplaythrough"
         :controls="false"
       />
